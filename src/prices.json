@@ -1,56 +1,822 @@
 {
+  "_meta": {
+    "updatedAt": "2026-09-30",
+    "source": "https://developers.openai.com/api/docs/pricing",
+    "units": "Token prices are USD per 1K tokens. Audio \"Usage\" is USD per Unit. Image \"Resolution\" prices are USD per image."
+  },
   "LanguageModels": {
-    "gpt-4o-mini-2024-07-18": {
-      "Input": 0.000150,
-      "Output": 0.000600
+    "gpt-6-astra": {
+      "Input": 0.01,
+      "CachedInput": 0.001,
+      "CacheWrite": 0.0125,
+      "Output": 0.05,
+      "LongContext": {
+        "Threshold": 272000,
+        "Input": 0.02,
+        "CachedInput": 0.002,
+        "CacheWrite": 0.025,
+        "Output": 0.075
+      },
+      "Batch": {
+        "Input": 0.005,
+        "CachedInput": 0.0005,
+        "CacheWrite": 0.00625,
+        "Output": 0.025,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.01,
+          "CachedInput": 0.001,
+          "CacheWrite": 0.0125,
+          "Output": 0.0375
+        }
+      },
+      "Flex": {
+        "Input": 0.005,
+        "CachedInput": 0.0005,
+        "CacheWrite": 0.00625,
+        "Output": 0.025,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.01,
+          "CachedInput": 0.001,
+          "CacheWrite": 0.0125,
+          "Output": 0.0375
+        }
+      },
+      "Fast": {
+        "Input": 0.02,
+        "CachedInput": 0.002,
+        "CacheWrite": 0.025,
+        "Output": 0.1,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.04,
+          "CachedInput": 0.004,
+          "CacheWrite": 0.05,
+          "Output": 0.15
+        }
+      },
+      "Ultrafast": {
+        "Input": 0.06,
+        "CachedInput": 0.006,
+        "CacheWrite": 0.075,
+        "Output": 0.3,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.12,
+          "CachedInput": 0.012,
+          "CacheWrite": 0.15,
+          "Output": 0.45
+        }
+      }
     },
-    "gpt-4o-mini": {
-      "Input": 0.000150,
-      "Output": 0.000600
+    "gpt-6.1-sol": {
+      "Input": 0.002,
+      "CachedInput": 0.0001,
+      "CacheWrite": 0.0025,
+      "Output": 0.01,
+      "LongContext": {
+        "Threshold": 272000,
+        "Input": 0.004,
+        "CachedInput": 0.0002,
+        "CacheWrite": 0.005,
+        "Output": 0.015
+      },
+      "Batch": {
+        "Input": 0.001,
+        "CachedInput": 5e-05,
+        "CacheWrite": 0.00125,
+        "Output": 0.005,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.002,
+          "CachedInput": 0.0001,
+          "CacheWrite": 0.0025,
+          "Output": 0.0075
+        }
+      },
+      "Flex": {
+        "Input": 0.001,
+        "CachedInput": 5e-05,
+        "CacheWrite": 0.00125,
+        "Output": 0.005,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.002,
+          "CachedInput": 0.0001,
+          "CacheWrite": 0.0025,
+          "Output": 0.0075
+        }
+      },
+      "Fast": {
+        "Input": 0.004,
+        "CachedInput": 0.0002,
+        "CacheWrite": 0.005,
+        "Output": 0.02,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.008,
+          "CachedInput": 0.0004,
+          "CacheWrite": 0.01,
+          "Output": 0.03
+        }
+      }
     },
-    "gpt-4o-2024-05-13": {
-      "Input": 0.00500,
-      "Output": 0.01500
+    "gpt-6-luna": {
+      "Input": 0.0001,
+      "CachedInput": 1e-05,
+      "CacheWrite": 0.000125,
+      "Output": 0.0005,
+      "LongContext": {
+        "Threshold": 272000,
+        "Input": 0.0002,
+        "CachedInput": 2e-05,
+        "CacheWrite": 0.00025,
+        "Output": 0.00075
+      },
+      "Batch": {
+        "Input": 5e-05,
+        "CachedInput": 5e-06,
+        "CacheWrite": 6.25e-05,
+        "Output": 0.00025,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.0001,
+          "CachedInput": 1e-05,
+          "CacheWrite": 0.000125,
+          "Output": 0.000375
+        }
+      },
+      "Flex": {
+        "Input": 5e-05,
+        "CachedInput": 5e-06,
+        "CacheWrite": 6.25e-05,
+        "Output": 0.00025,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.0001,
+          "CachedInput": 1e-05,
+          "CacheWrite": 0.000125,
+          "Output": 0.000375
+        }
+      },
+      "Fast": {
+        "Input": 0.0002,
+        "CachedInput": 2e-05,
+        "CacheWrite": 0.00025,
+        "Output": 0.001,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.0004,
+          "CachedInput": 4e-05,
+          "CacheWrite": 0.0005,
+          "Output": 0.0015
+        }
+      }
     },
-    "gpt-4o-2024-08-06": {
-      "Input": 0.00250,
-      "Output": 0.01000
+    "gpt-6-sol": {
+      "Input": 0.002,
+      "CachedInput": 0.0002,
+      "CacheWrite": 0.0025,
+      "Output": 0.01,
+      "LongContext": {
+        "Threshold": 272000,
+        "Input": 0.004,
+        "CachedInput": 0.0004,
+        "CacheWrite": 0.005,
+        "Output": 0.015
+      },
+      "Batch": {
+        "Input": 0.001,
+        "CachedInput": 0.0001,
+        "CacheWrite": 0.00125,
+        "Output": 0.005,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.002,
+          "CachedInput": 0.0002,
+          "CacheWrite": 0.0025,
+          "Output": 0.0075
+        }
+      },
+      "Flex": {
+        "Input": 0.001,
+        "CachedInput": 0.0001,
+        "CacheWrite": 0.00125,
+        "Output": 0.005,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.002,
+          "CachedInput": 0.0002,
+          "CacheWrite": 0.0025,
+          "Output": 0.0075
+        }
+      },
+      "Fast": {
+        "Input": 0.004,
+        "CachedInput": 0.0004,
+        "CacheWrite": 0.005,
+        "Output": 0.02,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.008,
+          "CachedInput": 0.0008,
+          "CacheWrite": 0.01,
+          "Output": 0.03
+        }
+      }
+    },
+    "gpt-5.6-sol": {
+      "Input": 0.004,
+      "CachedInput": 0.0004,
+      "CacheWrite": 0.005,
+      "Output": 0.02,
+      "LongContext": {
+        "Threshold": 272000,
+        "Input": 0.008,
+        "CachedInput": 0.0008,
+        "CacheWrite": 0.01,
+        "Output": 0.03
+      },
+      "Batch": {
+        "Input": 0.002,
+        "CachedInput": 0.0002,
+        "CacheWrite": 0.0025,
+        "Output": 0.01,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.004,
+          "CachedInput": 0.0004,
+          "CacheWrite": 0.005,
+          "Output": 0.015
+        }
+      },
+      "Flex": {
+        "Input": 0.002,
+        "CachedInput": 0.0002,
+        "CacheWrite": 0.0025,
+        "Output": 0.01,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.004,
+          "CachedInput": 0.0004,
+          "CacheWrite": 0.005,
+          "Output": 0.015
+        }
+      },
+      "Fast": {
+        "Input": 0.008,
+        "CachedInput": 0.0008,
+        "CacheWrite": 0.01,
+        "Output": 0.04,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.016,
+          "CachedInput": 0.0016,
+          "CacheWrite": 0.02,
+          "Output": 0.06
+        }
+      }
+    },
+    "gpt-5.6-terra": {
+      "Input": 0.002,
+      "CachedInput": 0.0002,
+      "CacheWrite": 0.0025,
+      "Output": 0.012,
+      "LongContext": {
+        "Threshold": 272000,
+        "Input": 0.004,
+        "CachedInput": 0.0004,
+        "CacheWrite": 0.005,
+        "Output": 0.018
+      },
+      "Batch": {
+        "Input": 0.001,
+        "CachedInput": 0.0001,
+        "CacheWrite": 0.00125,
+        "Output": 0.006,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.002,
+          "CachedInput": 0.0002,
+          "CacheWrite": 0.0025,
+          "Output": 0.009
+        }
+      },
+      "Flex": {
+        "Input": 0.001,
+        "CachedInput": 0.0001,
+        "CacheWrite": 0.00125,
+        "Output": 0.006,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.002,
+          "CachedInput": 0.0002,
+          "CacheWrite": 0.0025,
+          "Output": 0.009
+        }
+      },
+      "Fast": {
+        "Input": 0.004,
+        "CachedInput": 0.0004,
+        "CacheWrite": 0.005,
+        "Output": 0.024,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.008,
+          "CachedInput": 0.0008,
+          "CacheWrite": 0.01,
+          "Output": 0.036
+        }
+      }
+    },
+    "gpt-5.6-luna": {
+      "Input": 0.0002,
+      "CachedInput": 2e-05,
+      "CacheWrite": 0.00025,
+      "Output": 0.0012,
+      "LongContext": {
+        "Threshold": 272000,
+        "Input": 0.0004,
+        "CachedInput": 4e-05,
+        "CacheWrite": 0.0005,
+        "Output": 0.0018
+      },
+      "Batch": {
+        "Input": 0.0001,
+        "CachedInput": 1e-05,
+        "CacheWrite": 0.000125,
+        "Output": 0.0006,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.0002,
+          "CachedInput": 2e-05,
+          "CacheWrite": 0.00025,
+          "Output": 0.0009
+        }
+      },
+      "Flex": {
+        "Input": 0.0001,
+        "CachedInput": 1e-05,
+        "CacheWrite": 0.000125,
+        "Output": 0.0006,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.0002,
+          "CachedInput": 2e-05,
+          "CacheWrite": 0.00025,
+          "Output": 0.0009
+        }
+      },
+      "Fast": {
+        "Input": 0.0004,
+        "CachedInput": 4e-05,
+        "CacheWrite": 0.0005,
+        "Output": 0.0024,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.0008,
+          "CachedInput": 8e-05,
+          "CacheWrite": 0.001,
+          "Output": 0.0036
+        }
+      }
+    },
+    "gpt-5.5": {
+      "Input": 0.005,
+      "CachedInput": 0.0005,
+      "Output": 0.03,
+      "LongContext": {
+        "Threshold": 272000,
+        "Input": 0.01,
+        "CachedInput": 0.001,
+        "Output": 0.045
+      },
+      "Batch": {
+        "Input": 0.0025,
+        "CachedInput": 0.00025,
+        "Output": 0.015,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.005,
+          "CachedInput": 0.0005,
+          "Output": 0.0225
+        }
+      },
+      "Flex": {
+        "Input": 0.0025,
+        "CachedInput": 0.00025,
+        "Output": 0.015,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.005,
+          "CachedInput": 0.0005,
+          "Output": 0.0225
+        }
+      },
+      "Fast": {
+        "Input": 0.0125,
+        "CachedInput": 0.00125,
+        "Output": 0.075
+      }
+    },
+    "gpt-5.5-pro": {
+      "Input": 0.03,
+      "Output": 0.18,
+      "LongContext": {
+        "Threshold": 272000,
+        "Input": 0.06,
+        "Output": 0.27
+      },
+      "Batch": {
+        "Input": 0.015,
+        "Output": 0.09
+      },
+      "Flex": {
+        "Input": 0.015,
+        "Output": 0.09
+      }
+    },
+    "gpt-5.4": {
+      "Input": 0.0025,
+      "CachedInput": 0.00025,
+      "Output": 0.015,
+      "LongContext": {
+        "Threshold": 272000,
+        "Input": 0.005,
+        "CachedInput": 0.0005,
+        "Output": 0.0225
+      },
+      "Batch": {
+        "Input": 0.00125,
+        "CachedInput": 0.00013,
+        "Output": 0.0075,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.0025,
+          "CachedInput": 0.00025,
+          "Output": 0.01125
+        }
+      },
+      "Flex": {
+        "Input": 0.00125,
+        "CachedInput": 0.00013,
+        "Output": 0.0075,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.0025,
+          "CachedInput": 0.00025,
+          "Output": 0.01125
+        }
+      },
+      "Fast": {
+        "Input": 0.005,
+        "CachedInput": 0.0005,
+        "Output": 0.03
+      }
+    },
+    "gpt-5.4-mini": {
+      "Input": 0.00075,
+      "CachedInput": 7.5e-05,
+      "Output": 0.0045,
+      "Batch": {
+        "Input": 0.000375,
+        "CachedInput": 3.75e-05,
+        "Output": 0.00225
+      },
+      "Flex": {
+        "Input": 0.000375,
+        "CachedInput": 3.75e-05,
+        "Output": 0.00225
+      },
+      "Fast": {
+        "Input": 0.0015,
+        "CachedInput": 0.00015,
+        "Output": 0.009
+      }
+    },
+    "gpt-5.4-nano": {
+      "Input": 0.0002,
+      "CachedInput": 2e-05,
+      "Output": 0.00125,
+      "Batch": {
+        "Input": 0.0001,
+        "CachedInput": 1e-05,
+        "Output": 0.000625
+      },
+      "Flex": {
+        "Input": 0.0001,
+        "CachedInput": 1e-05,
+        "Output": 0.000625
+      }
+    },
+    "gpt-5.4-pro": {
+      "Input": 0.03,
+      "Output": 0.18,
+      "LongContext": {
+        "Threshold": 272000,
+        "Input": 0.06,
+        "Output": 0.27
+      },
+      "Batch": {
+        "Input": 0.015,
+        "Output": 0.09,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.03,
+          "Output": 0.135
+        }
+      },
+      "Flex": {
+        "Input": 0.015,
+        "Output": 0.09,
+        "LongContext": {
+          "Threshold": 272000,
+          "Input": 0.03,
+          "Output": 0.135
+        }
+      }
+    },
+    "gpt-5.2": {
+      "Input": 0.00175,
+      "CachedInput": 0.000175,
+      "Output": 0.014,
+      "Batch": {
+        "Input": 0.000875,
+        "CachedInput": 8.75e-05,
+        "Output": 0.007
+      },
+      "Flex": {
+        "Input": 0.000875,
+        "CachedInput": 8.75e-05,
+        "Output": 0.007
+      },
+      "Fast": {
+        "Input": 0.0035,
+        "CachedInput": 0.00035,
+        "Output": 0.028
+      }
+    },
+    "gpt-5.2-pro": {
+      "Input": 0.021,
+      "Output": 0.168,
+      "Batch": {
+        "Input": 0.0105,
+        "Output": 0.084
+      }
+    },
+    "gpt-5.1": {
+      "Input": 0.00125,
+      "CachedInput": 0.000125,
+      "Output": 0.01,
+      "Batch": {
+        "Input": 0.000625,
+        "CachedInput": 6.25e-05,
+        "Output": 0.005
+      },
+      "Flex": {
+        "Input": 0.000625,
+        "CachedInput": 6.25e-05,
+        "Output": 0.005
+      },
+      "Fast": {
+        "Input": 0.0025,
+        "CachedInput": 0.00025,
+        "Output": 0.02
+      }
+    },
+    "gpt-5": {
+      "Input": 0.00125,
+      "CachedInput": 0.000125,
+      "Output": 0.01,
+      "Batch": {
+        "Input": 0.000625,
+        "CachedInput": 6.25e-05,
+        "Output": 0.005
+      },
+      "Flex": {
+        "Input": 0.000625,
+        "CachedInput": 6.25e-05,
+        "Output": 0.005
+      },
+      "Fast": {
+        "Input": 0.0025,
+        "CachedInput": 0.00025,
+        "Output": 0.02
+      }
+    },
+    "gpt-5-mini": {
+      "Input": 0.00025,
+      "CachedInput": 2.5e-05,
+      "Output": 0.002,
+      "Batch": {
+        "Input": 0.000125,
+        "CachedInput": 1.25e-05,
+        "Output": 0.001
+      },
+      "Flex": {
+        "Input": 0.000125,
+        "CachedInput": 1.25e-05,
+        "Output": 0.001
+      },
+      "Fast": {
+        "Input": 0.00045,
+        "CachedInput": 4.5e-05,
+        "Output": 0.0036
+      }
+    },
+    "gpt-5-nano": {
+      "Input": 5e-05,
+      "CachedInput": 5e-06,
+      "Output": 0.0004,
+      "Batch": {
+        "Input": 2.5e-05,
+        "CachedInput": 2.5e-06,
+        "Output": 0.0002
+      },
+      "Flex": {
+        "Input": 2.5e-05,
+        "CachedInput": 2.5e-06,
+        "Output": 0.0002
+      }
+    },
+    "gpt-5-pro": {
+      "Input": 0.015,
+      "Output": 0.12,
+      "Batch": {
+        "Input": 0.0075,
+        "Output": 0.06
+      }
+    },
+    "gpt-4.1": {
+      "Input": 0.002,
+      "CachedInput": 0.0005,
+      "Output": 0.008,
+      "Batch": {
+        "Input": 0.001,
+        "Output": 0.004
+      },
+      "Fast": {
+        "Input": 0.0035,
+        "CachedInput": 0.000875,
+        "Output": 0.014
+      }
+    },
+    "gpt-4.1-mini": {
+      "Input": 0.0004,
+      "CachedInput": 0.0001,
+      "Output": 0.0016,
+      "Batch": {
+        "Input": 0.0002,
+        "Output": 0.0008
+      },
+      "Fast": {
+        "Input": 0.0007,
+        "CachedInput": 0.000175,
+        "Output": 0.0028
+      }
+    },
+    "gpt-4.1-nano": {
+      "Input": 0.0001,
+      "CachedInput": 2.5e-05,
+      "Output": 0.0004,
+      "Batch": {
+        "Input": 5e-05,
+        "Output": 0.0002
+      },
+      "Fast": {
+        "Input": 0.0002,
+        "CachedInput": 5e-05,
+        "Output": 0.0008
+      }
     },
     "gpt-4o": {
-      "Input": 0.00500,
-      "Output": 0.01500
+      "Input": 0.0025,
+      "CachedInput": 0.00125,
+      "Output": 0.01,
+      "Batch": {
+        "Input": 0.00125,
+        "Output": 0.005
+      },
+      "Fast": {
+        "Input": 0.00425,
+        "CachedInput": 0.002125,
+        "Output": 0.017
+      }
     },
-    "chatgpt-4o-latest": {
-      "Input": 0.0050,
-      "Output": 0.0150
+    "gpt-4o-2024-05-13": {
+      "Input": 0.005,
+      "Output": 0.015,
+      "Batch": {
+        "Input": 0.0025,
+        "Output": 0.0075
+      },
+      "Fast": {
+        "Input": 0.00875,
+        "Output": 0.02625
+      }
     },
-    "gpt-4-turbo": {
-      "Input": 0.0100,
-      "Output": 0.0300
+    "gpt-4o-mini": {
+      "Input": 0.00015,
+      "CachedInput": 7.5e-05,
+      "Output": 0.0006,
+      "Batch": {
+        "Input": 7.5e-05,
+        "Output": 0.0003
+      },
+      "Fast": {
+        "Input": 0.00025,
+        "CachedInput": 0.000125,
+        "Output": 0.001
+      }
+    },
+    "o1": {
+      "Input": 0.015,
+      "CachedInput": 0.0075,
+      "Output": 0.06,
+      "Batch": {
+        "Input": 0.0075,
+        "Output": 0.03
+      }
+    },
+    "o1-pro": {
+      "Input": 0.15,
+      "Output": 0.6,
+      "Batch": {
+        "Input": 0.075,
+        "Output": 0.3
+      }
+    },
+    "o3-pro": {
+      "Input": 0.02,
+      "Output": 0.08,
+      "Batch": {
+        "Input": 0.01,
+        "Output": 0.04
+      }
+    },
+    "o3": {
+      "Input": 0.002,
+      "CachedInput": 0.0005,
+      "Output": 0.008,
+      "Batch": {
+        "Input": 0.001,
+        "Output": 0.004
+      },
+      "Flex": {
+        "Input": 0.001,
+        "CachedInput": 0.00025,
+        "Output": 0.004
+      },
+      "Fast": {
+        "Input": 0.0035,
+        "CachedInput": 0.000875,
+        "Output": 0.014
+      }
+    },
+    "o4-mini": {
+      "Input": 0.0011,
+      "CachedInput": 0.000275,
+      "Output": 0.0044,
+      "Batch": {
+        "Input": 0.00055,
+        "Output": 0.0022
+      },
+      "Flex": {
+        "Input": 0.00055,
+        "CachedInput": 0.000138,
+        "Output": 0.0022
+      },
+      "Fast": {
+        "Input": 0.002,
+        "CachedInput": 0.0005,
+        "Output": 0.008
+      }
+    },
+    "o3-mini": {
+      "Input": 0.0011,
+      "CachedInput": 0.00055,
+      "Output": 0.0044,
+      "Batch": {
+        "Input": 0.00055,
+        "Output": 0.0022
+      }
     },
     "gpt-4-turbo-2024-04-09": {
-      "Input": 0.0100,
-      "Output": 0.0300
+      "Input": 0.01,
+      "Output": 0.03,
+      "Batch": {
+        "Input": 0.005,
+        "Output": 0.015
+      }
     },
-    "gpt-4": {
-      "Input": 0.0300,
-      "Output": 0.0600
-    },
-    "gpt-4-32k": {
-      "Input": 0.0600,
-      "Output": 0.1200
-    },
-    "gpt-4-0125-preview": {
-      "Input": 0.0100,
-      "Output": 0.0300
-    },
-    "gpt-4-1106-preview": {
-      "Input": 0.0100,
-      "Output": 0.0300
-    },
-    "gpt-4-vision-preview": {
-      "Input": 0.0100,
-      "Output": 0.0300
+    "gpt-4-0613": {
+      "Input": 0.03,
+      "Output": 0.06,
+      "Batch": {
+        "Input": 0.015,
+        "Output": 0.03
+      }
     },
     "gpt-3.5-turbo": {
       "Input": 0.0005,
@@ -58,90 +824,638 @@
     },
     "gpt-3.5-turbo-0125": {
       "Input": 0.0005,
-      "Output": 0.0015
+      "Output": 0.0015,
+      "Batch": {
+        "Input": 0.00025,
+        "Output": 0.00075
+      }
+    },
+    "gpt-3.5-turbo-1106": {
+      "Input": 0.001,
+      "Output": 0.002,
+      "Batch": {
+        "Input": 0.001,
+        "Output": 0.002
+      }
     },
     "gpt-3.5-turbo-instruct": {
       "Input": 0.0015,
-      "Output": 0.0020
-    },
-    "gpt-3.5-turbo-1106": {
-      "Input": 0.0010,
-      "Output": 0.0020
-    },
-    "gpt-3.5-turbo-0613": {
-      "Input": 0.0015,
-      "Output": 0.0020
-    },
-    "gpt-3.5-turbo-16k-0613": {
-      "Input": 0.0030,
-      "Output": 0.0040
-    },
-    "gpt-3.5-turbo-0301": {
-      "Input": 0.0015,
-      "Output": 0.0020
+      "Output": 0.002
     },
     "davinci-002": {
       "Input": 0.002,
-      "Output": 0.002
+      "Output": 0.002,
+      "Batch": {
+        "Input": 0.001,
+        "Output": 0.001
+      }
     },
     "babbage-002": {
       "Input": 0.0004,
-      "Output": 0.0004
+      "Output": 0.0004,
+      "Batch": {
+        "Input": 0.0002,
+        "Output": 0.0002
+      }
+    },
+    "gpt-5.6-cyber": {
+      "Input": 0.0125,
+      "CachedInput": 0.00125,
+      "CacheWrite": 0.015625,
+      "Output": 0.075
+    },
+    "gpt-5.5-cyber": {
+      "Input": 0.0125,
+      "CachedInput": 0.00125,
+      "Output": 0.075
+    },
+    "chat-latest": {
+      "Input": 0.005,
+      "CachedInput": 0.0005,
+      "Output": 0.03
+    },
+    "gpt-5.3-codex": {
+      "Input": 0.00175,
+      "CachedInput": 0.000175,
+      "Output": 0.014,
+      "Fast": {
+        "Input": 0.0035,
+        "CachedInput": 0.00035,
+        "Output": 0.028
+      }
+    },
+    "gpt-rosalind-research": {
+      "Input": 0.005,
+      "CachedInput": 0.0005,
+      "Output": 0.025
+    },
+    "gpt-5-search-api": {
+      "Input": 0.00125,
+      "CachedInput": 0.000125,
+      "Output": 0.01
+    },
+    "omni-moderation-latest": {
+      "Input": 0.0,
+      "Output": 0.0
+    },
+    "gpt-4o-2024-08-06": {
+      "Input": 0.0025,
+      "CachedInput": 0.00125,
+      "Output": 0.01,
+      "Batch": {
+        "Input": 0.00125,
+        "Output": 0.005
+      },
+      "Fast": {
+        "Input": 0.00425,
+        "CachedInput": 0.002125,
+        "Output": 0.017
+      }
+    },
+    "gpt-4o-2024-11-20": {
+      "Input": 0.0025,
+      "CachedInput": 0.00125,
+      "Output": 0.01,
+      "Batch": {
+        "Input": 0.00125,
+        "Output": 0.005
+      },
+      "Fast": {
+        "Input": 0.00425,
+        "CachedInput": 0.002125,
+        "Output": 0.017
+      }
+    },
+    "gpt-4o-mini-2024-07-18": {
+      "Input": 0.00015,
+      "CachedInput": 7.5e-05,
+      "Output": 0.0006,
+      "Batch": {
+        "Input": 7.5e-05,
+        "Output": 0.0003
+      },
+      "Fast": {
+        "Input": 0.00025,
+        "CachedInput": 0.000125,
+        "Output": 0.001
+      }
+    },
+    "gpt-4.1-2025-04-14": {
+      "Input": 0.002,
+      "CachedInput": 0.0005,
+      "Output": 0.008,
+      "Batch": {
+        "Input": 0.001,
+        "Output": 0.004
+      },
+      "Fast": {
+        "Input": 0.0035,
+        "CachedInput": 0.000875,
+        "Output": 0.014
+      }
+    },
+    "gpt-4.1-mini-2025-04-14": {
+      "Input": 0.0004,
+      "CachedInput": 0.0001,
+      "Output": 0.0016,
+      "Batch": {
+        "Input": 0.0002,
+        "Output": 0.0008
+      },
+      "Fast": {
+        "Input": 0.0007,
+        "CachedInput": 0.000175,
+        "Output": 0.0028
+      }
+    },
+    "gpt-4.1-nano-2025-04-14": {
+      "Input": 0.0001,
+      "CachedInput": 2.5e-05,
+      "Output": 0.0004,
+      "Batch": {
+        "Input": 5e-05,
+        "Output": 0.0002
+      },
+      "Fast": {
+        "Input": 0.0002,
+        "CachedInput": 5e-05,
+        "Output": 0.0008
+      }
+    },
+    "gpt-4-turbo": {
+      "Input": 0.01,
+      "Output": 0.03,
+      "Batch": {
+        "Input": 0.005,
+        "Output": 0.015
+      }
+    },
+    "gpt-4": {
+      "Input": 0.03,
+      "Output": 0.06,
+      "Batch": {
+        "Input": 0.015,
+        "Output": 0.03
+      }
+    },
+    "o4-mini-2025-04-16": {
+      "Input": 0.0011,
+      "CachedInput": 0.000275,
+      "Output": 0.0044,
+      "Batch": {
+        "Input": 0.00055,
+        "Output": 0.0022
+      },
+      "Flex": {
+        "Input": 0.00055,
+        "CachedInput": 0.000138,
+        "Output": 0.0022
+      },
+      "Fast": {
+        "Input": 0.002,
+        "CachedInput": 0.0005,
+        "Output": 0.008
+      }
+    },
+    "o3-2025-04-16": {
+      "Input": 0.002,
+      "CachedInput": 0.0005,
+      "Output": 0.008,
+      "Batch": {
+        "Input": 0.001,
+        "Output": 0.004
+      },
+      "Flex": {
+        "Input": 0.001,
+        "CachedInput": 0.00025,
+        "Output": 0.004
+      },
+      "Fast": {
+        "Input": 0.0035,
+        "CachedInput": 0.000875,
+        "Output": 0.014
+      }
+    },
+    "chatgpt-4o-latest": {
+      "Input": 0.005,
+      "Output": 0.015
+    },
+    "gpt-4-32k": {
+      "Input": 0.06,
+      "Output": 0.12
+    },
+    "gpt-4-0125-preview": {
+      "Input": 0.01,
+      "Output": 0.03
+    },
+    "gpt-4-1106-preview": {
+      "Input": 0.01,
+      "Output": 0.03
+    },
+    "gpt-4-vision-preview": {
+      "Input": 0.01,
+      "Output": 0.03
+    },
+    "gpt-3.5-turbo-0613": {
+      "Input": 0.0015,
+      "Output": 0.002
+    },
+    "gpt-3.5-turbo-16k-0613": {
+      "Input": 0.003,
+      "Output": 0.004
+    },
+    "gpt-3.5-turbo-0301": {
+      "Input": 0.0015,
+      "Output": 0.002
     }
   },
   "FineTuningModels": {
+    "o4-mini-2025-04-16": {
+      "TrainingPerHour": 100.0,
+      "Input": 0.004,
+      "CachedInput": 0.001,
+      "Output": 0.016,
+      "Batch": {
+        "Input": 0.002,
+        "CachedInput": 0.0005,
+        "Output": 0.008
+      }
+    },
+    "o4-mini-2025-04-16 (data sharing)": {
+      "TrainingPerHour": 100.0,
+      "Input": 0.002,
+      "CachedInput": 0.0005,
+      "Output": 0.008,
+      "Batch": {
+        "Input": 0.001,
+        "CachedInput": 0.00025,
+        "Output": 0.004
+      }
+    },
+    "gpt-4.1-2025-04-14": {
+      "Training": 0.025,
+      "Input": 0.003,
+      "CachedInput": 0.00075,
+      "Output": 0.012,
+      "Batch": {
+        "Input": 0.0015,
+        "CachedInput": 0.0005,
+        "Output": 0.006
+      }
+    },
+    "gpt-4.1-mini-2025-04-14": {
+      "Training": 0.005,
+      "Input": 0.0008,
+      "CachedInput": 0.0002,
+      "Output": 0.0032,
+      "Batch": {
+        "Input": 0.0004,
+        "CachedInput": 0.0001,
+        "Output": 0.0016
+      }
+    },
+    "gpt-4.1-nano-2025-04-14": {
+      "Training": 0.0015,
+      "Input": 0.0002,
+      "CachedInput": 5e-05,
+      "Output": 0.0008,
+      "Batch": {
+        "Input": 0.0001,
+        "CachedInput": 2.5e-05,
+        "Output": 0.0004
+      }
+    },
     "gpt-4o-2024-08-06": {
-        "Training": 0.025000,
-        "Input": 0.003750,
-        "Output": 0.015000
+      "Training": 0.025,
+      "Input": 0.00375,
+      "CachedInput": 0.001875,
+      "Output": 0.015,
+      "Batch": {
+        "Input": 0.002225,
+        "CachedInput": 0.0009,
+        "Output": 0.0125
+      }
     },
     "gpt-4o-mini-2024-07-18": {
-      "Training": 0.00030,
-      "Input": 0.00030,
-      "Output": 0.00030
+      "Training": 0.003,
+      "Input": 0.0003,
+      "CachedInput": 0.00015,
+      "Output": 0.0012,
+      "Batch": {
+        "Input": 0.00015,
+        "CachedInput": 7.5e-05,
+        "Output": 0.0006
+      }
     },
     "gpt-3.5-turbo": {
-      "Training": 0.00800,
-      "Input": 0.00300,
-      "Output": 0.00600
+      "Training": 0.008,
+      "Input": 0.003,
+      "Output": 0.006,
+      "Batch": {
+        "Input": 0.0015,
+        "Output": 0.003
+      }
     },
     "davinci-002": {
-      "Training": 0.00600,
-      "Input": 0.01200,
-      "Output": 0.01200
+      "Training": 0.006,
+      "Input": 0.012,
+      "Output": 0.012,
+      "Batch": {
+        "Input": 0.006,
+        "Output": 0.006
+      }
     },
     "babbage-002": {
-      "Training": 0.00040,
-      "Input": 0.00160,
-      "Output": 0.00160
+      "Training": 0.0004,
+      "Input": 0.0016,
+      "Output": 0.0016,
+      "Batch": {
+        "Input": 0.0008,
+        "Output": 0.0009
+      }
     }
   },
   "EmbeddingModels": {
-    "ada v2": {
-      "Usage": 0.000100
+    "text-embedding-3-small": {
+      "Usage": 2e-05
     },
     "text-embedding-3-large": {
-      "Usage": 0.000130
+      "Usage": 0.00013
     },
-    "text-embedding-3-small": {
-      "Usage": 0.000020
+    "text-embedding-ada-002": {
+      "Usage": 0.0001
+    },
+    "ada v2": {
+      "Usage": 0.0001
     }
   },
   "ImageModels": {
-    "dall-e 3":{
+    "gpt-image-2.5-sunburst": {
+      "Tokens": {
+        "Image": {
+          "Input": 0.008,
+          "CachedInput": 0.002,
+          "Output": 0.03
+        },
+        "Text": {
+          "Input": 0.005,
+          "CachedInput": 0.00125
+        }
+      }
+    },
+    "gpt-image-2.5-flare": {
+      "Tokens": {
+        "Image": {
+          "Input": 0.008,
+          "CachedInput": 0.002,
+          "Output": 0.03
+        },
+        "Text": {
+          "Input": 0.005,
+          "CachedInput": 0.00125
+        }
+      }
+    },
+    "gpt-image-2": {
+      "Quality": {
+        "Low": {
+          "Resolution": {
+            "1024x1024": 0.006,
+            "1024x1536": 0.005,
+            "1536x1024": 0.005
+          }
+        },
+        "Medium": {
+          "Resolution": {
+            "1024x1024": 0.053,
+            "1024x1536": 0.041,
+            "1536x1024": 0.041
+          }
+        },
+        "High": {
+          "Resolution": {
+            "1024x1024": 0.211,
+            "1024x1536": 0.165,
+            "1536x1024": 0.165
+          }
+        }
+      },
+      "Tokens": {
+        "Image": {
+          "Input": 0.008,
+          "CachedInput": 0.002,
+          "Output": 0.03
+        },
+        "Text": {
+          "Input": 0.005,
+          "CachedInput": 0.00125
+        }
+      },
+      "Batch": {
+        "Tokens": {
+          "Image": {
+            "Input": 0.004,
+            "CachedInput": 0.001,
+            "Output": 0.015
+          },
+          "Text": {
+            "Input": 0.0025,
+            "CachedInput": 0.000625
+          }
+        }
+      }
+    },
+    "gpt-image-1.5": {
+      "Quality": {
+        "Low": {
+          "Resolution": {
+            "1024x1024": 0.009,
+            "1024x1536": 0.013,
+            "1536x1024": 0.013
+          }
+        },
+        "Medium": {
+          "Resolution": {
+            "1024x1024": 0.034,
+            "1024x1536": 0.05,
+            "1536x1024": 0.05
+          }
+        },
+        "High": {
+          "Resolution": {
+            "1024x1024": 0.133,
+            "1024x1536": 0.2,
+            "1536x1024": 0.2
+          }
+        }
+      },
+      "Tokens": {
+        "Image": {
+          "Input": 0.008,
+          "CachedInput": 0.002,
+          "Output": 0.032
+        },
+        "Text": {
+          "Input": 0.005,
+          "CachedInput": 0.00125,
+          "Output": 0.01
+        }
+      },
+      "Batch": {
+        "Tokens": {
+          "Image": {
+            "Input": 0.004,
+            "CachedInput": 0.001,
+            "Output": 0.016
+          },
+          "Text": {
+            "Input": 0.0025,
+            "CachedInput": 0.00063,
+            "Output": 0.005
+          }
+        }
+      }
+    },
+    "gpt-image-1-mini": {
+      "Quality": {
+        "Low": {
+          "Resolution": {
+            "1024x1024": 0.005,
+            "1024x1536": 0.006,
+            "1536x1024": 0.006
+          }
+        },
+        "Medium": {
+          "Resolution": {
+            "1024x1024": 0.011,
+            "1024x1536": 0.015,
+            "1536x1024": 0.015
+          }
+        },
+        "High": {
+          "Resolution": {
+            "1024x1024": 0.036,
+            "1024x1536": 0.052,
+            "1536x1024": 0.052
+          }
+        }
+      },
+      "Tokens": {
+        "Image": {
+          "Input": 0.0025,
+          "CachedInput": 0.00025,
+          "Output": 0.008
+        },
+        "Text": {
+          "Input": 0.002,
+          "CachedInput": 0.0002
+        }
+      },
+      "Batch": {
+        "Tokens": {
+          "Image": {
+            "Input": 0.00125,
+            "CachedInput": 0.00013,
+            "Output": 0.004
+          },
+          "Text": {
+            "Input": 0.001,
+            "CachedInput": 0.0001
+          }
+        }
+      }
+    },
+    "gpt-image-1": {
+      "Quality": {
+        "Low": {
+          "Resolution": {
+            "1024x1024": 0.011,
+            "1024x1536": 0.016,
+            "1536x1024": 0.016
+          }
+        },
+        "Medium": {
+          "Resolution": {
+            "1024x1024": 0.042,
+            "1024x1536": 0.063,
+            "1536x1024": 0.063
+          }
+        },
+        "High": {
+          "Resolution": {
+            "1024x1024": 0.167,
+            "1024x1536": 0.25,
+            "1536x1024": 0.25
+          }
+        }
+      },
+      "Tokens": {
+        "Image": {
+          "Input": 0.01,
+          "CachedInput": 0.0025,
+          "Output": 0.04
+        },
+        "Text": {
+          "Input": 0.005,
+          "CachedInput": 0.00125
+        }
+      },
+      "Batch": {
+        "Tokens": {
+          "Image": {
+            "Input": 0.005,
+            "CachedInput": 0.00125,
+            "Output": 0.02
+          },
+          "Text": {
+            "Input": 0.0025,
+            "CachedInput": 0.00063
+          }
+        }
+      }
+    },
+    "chatgpt-image-latest": {
+      "Tokens": {
+        "Image": {
+          "Input": 0.008,
+          "CachedInput": 0.002,
+          "Output": 0.032
+        },
+        "Text": {
+          "Input": 0.005,
+          "CachedInput": 0.00125,
+          "Output": 0.01
+        }
+      },
+      "Batch": {
+        "Tokens": {
+          "Image": {
+            "Input": 0.004,
+            "CachedInput": 0.001,
+            "Output": 0.016
+          },
+          "Text": {
+            "Input": 0.0025,
+            "CachedInput": 0.00063,
+            "Output": 0.005
+          }
+        }
+      }
+    },
+    "dall-e 3": {
       "Quality": {
         "Standard": {
           "Resolution": {
-            "1024x1024": 0.040,
-            "1024x1792": 0.080,
-            "1792x1024": 0.080
+            "1024x1024": 0.04,
+            "1024x1792": 0.08,
+            "1792x1024": 0.08
           }
         },
         "HD": {
           "Resolution": {
-            "1024x1024": 0.080,
-            "1024x1792": 0.120,
-            "1792x1024": 0.120
+            "1024x1024": 0.08,
+            "1024x1792": 0.12,
+            "1792x1024": 0.12
           }
         }
       }
@@ -149,24 +1463,207 @@
     "dall-e 2": {
       "Quality": {
         "Standard": {
-            "Resolution": {
-                "1024x1024": 0.020,
-                "512x512": 0.018,
-                "256x256": 0.040
-            }
+          "Resolution": {
+            "1024x1024": 0.02,
+            "512x512": 0.018,
+            "256x256": 0.016
+          }
         }
       }
     }
   },
+  "MultimodalModels": {
+    "gpt-realtime-2.1": {
+      "Audio": {
+        "Input": 0.032,
+        "CachedInput": 0.0004,
+        "Output": 0.064
+      },
+      "Text": {
+        "Input": 0.004,
+        "CachedInput": 0.0004,
+        "Output": 0.024
+      },
+      "Image": {
+        "Input": 0.005,
+        "CachedInput": 0.0005
+      }
+    },
+    "gpt-realtime-2.1-mini": {
+      "Audio": {
+        "Input": 0.01,
+        "CachedInput": 0.0003,
+        "Output": 0.02
+      },
+      "Text": {
+        "Input": 0.0006,
+        "CachedInput": 6e-05,
+        "Output": 0.0024
+      },
+      "Image": {
+        "Input": 0.0008,
+        "CachedInput": 8e-05
+      }
+    },
+    "gpt-realtime-2": {
+      "Audio": {
+        "Input": 0.032,
+        "CachedInput": 0.0004,
+        "Output": 0.064
+      },
+      "Text": {
+        "Input": 0.004,
+        "CachedInput": 0.0004,
+        "Output": 0.024
+      },
+      "Image": {
+        "Input": 0.005,
+        "CachedInput": 0.0005
+      }
+    },
+    "gpt-realtime-1.5": {
+      "Audio": {
+        "Input": 0.032,
+        "CachedInput": 0.0004,
+        "Output": 0.064
+      },
+      "Text": {
+        "Input": 0.004,
+        "CachedInput": 0.0004,
+        "Output": 0.016
+      },
+      "Image": {
+        "Input": 0.005,
+        "CachedInput": 0.0005
+      }
+    },
+    "gpt-realtime-mini": {
+      "Audio": {
+        "Input": 0.01,
+        "CachedInput": 0.0003,
+        "Output": 0.02
+      },
+      "Text": {
+        "Input": 0.0006,
+        "CachedInput": 6e-05,
+        "Output": 0.0024
+      },
+      "Image": {
+        "Input": 0.0008,
+        "CachedInput": 8e-05
+      }
+    },
+    "gpt-realtime": {
+      "Audio": {
+        "Input": 0.032,
+        "CachedInput": 0.0004,
+        "Output": 0.064
+      },
+      "Text": {
+        "Input": 0.004,
+        "CachedInput": 0.0004,
+        "Output": 0.016
+      },
+      "Image": {
+        "Input": 0.005,
+        "CachedInput": 0.0005
+      }
+    },
+    "gpt-audio-1.5": {
+      "Audio": {
+        "Input": 0.032,
+        "Output": 0.064
+      },
+      "Text": {
+        "Input": 0.0025,
+        "Output": 0.01
+      }
+    },
+    "gpt-audio-mini": {
+      "Audio": {
+        "Input": 0.01,
+        "Output": 0.02
+      },
+      "Text": {
+        "Input": 0.0006,
+        "Output": 0.0024
+      }
+    },
+    "gpt-audio": {
+      "Audio": {
+        "Input": 0.032,
+        "Output": 0.064
+      },
+      "Text": {
+        "Input": 0.0025,
+        "Output": 0.01
+      }
+    },
+    "gpt-4o-mini-tts": {
+      "Audio": {
+        "Output": 0.012
+      },
+      "Text": {
+        "Input": 0.0006
+      }
+    }
+  },
   "AudioModels": {
+    "gpt-live-1": {
+      "Usage": 0.05,
+      "Unit": "minute"
+    },
+    "gpt-realtime-translate": {
+      "Usage": 0.034,
+      "Unit": "minute"
+    },
+    "gpt-live-transcribe": {
+      "Usage": 0.017,
+      "Unit": "minute"
+    },
+    "gpt-realtime-whisper": {
+      "Usage": 0.017,
+      "Unit": "minute"
+    },
+    "gpt-transcribe": {
+      "Usage": 0.0045,
+      "Unit": "minute"
+    },
+    "gpt-4o-transcribe": {
+      "Usage": 0.006,
+      "Unit": "minute"
+    },
+    "gpt-4o-mini-transcribe": {
+      "Usage": 0.003,
+      "Unit": "minute"
+    },
+    "gpt-4o-transcribe-diarize": {
+      "Usage": 0.006,
+      "Unit": "minute"
+    },
+    "whisper-1": {
+      "Usage": 0.006,
+      "Unit": "minute"
+    },
     "whisper": {
-      "Usage": 0.000006
+      "Usage": 0.006,
+      "Unit": "minute"
+    },
+    "tts-1": {
+      "Usage": 0.015,
+      "Unit": "1K characters"
+    },
+    "tts-1-hd": {
+      "Usage": 0.03,
+      "Unit": "1K characters"
     },
     "tts": {
-      "Usage": 0.015000
+      "Usage": 0.015,
+      "Unit": "1K characters"
     },
     "tts hd": {
-      "Usage": 0.030000
+      "Usage": 0.03,
+      "Unit": "1K characters"
     }
   }
 }
