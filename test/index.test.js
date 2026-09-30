@@ -67,6 +67,17 @@ test('audio cost', () => {
     close(calc.calculateAudioModelCost('tts-1-hd', 1000000).totalCost, 30);
 });
 
+test('audio models accept OpenAI API names and legacy aliases (#1)', () => {
+    close(calc.calculateAudioModelCost('whisper-1', 10).totalCost, calc.calculateAudioModelCost('whisper', 10).totalCost);
+    close(calc.calculateAudioModelCost('tts-1', 1000).totalCost, calc.calculateAudioModelCost('tts', 1000).totalCost);
+    close(calc.calculateAudioModelCost('tts-1-hd', 1000).totalCost, calc.calculateAudioModelCost('tts hd', 1000).totalCost);
+});
+
+test('transcription cost is per minute, as documented (#2)', () => {
+    // whisper-1: $0.006 / minute, so 60 minutes cost $0.36 (the README example)
+    assert.strictEqual(calc.calculateAudioModelCost('whisper-1', 60).formattedTotalCost, '$0.36');
+});
+
 test('multimodal token cost', () => {
     const cost = calc.calculateMultimodalModelCost('gpt-realtime-2', {
         audio: { input: 1000000, output: 1000000 },
